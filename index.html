@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithin Jewellery Works | Royal Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #D4AF37; --dark-gold: #996515; }
+        body { background-color: #050505; color: #f4f4f4; font-family: 'Playfair Display', serif; overflow-x: hidden; }
+        .royal-font { font-family: 'Cinzel', serif; }
+        
+        /* Premium Background Effect */
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1573408302185-9102fe742d4a?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center; height: 60vh;
+        }
+
+        /* Card Hover Glow */
+        .jewelry-card {
+            transition: all 0.4s ease;
+            border: 1px solid #222;
+        }
+        .jewelry-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            transform: scale(1.02);
+        }
+
+        /* Floating WhatsApp Animation */
+        .float-wa {
+            position: fixed; bottom: 30px; right: 30px;
+            background: #25d366; color: white; border-radius: 50px;
+            padding: 15px 25px; box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            z-index: 100; animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/919866483839" class="float-wa flex items-center gap-2 font-bold">
+        <span>Chat with Us</span>
+    </a>
+
+    <section class="hero-bg flex flex-col items-center justify-center text-center px-4">
+        <h1 class="royal-font text-5xl md:text-7xl text-[#D4AF37] mb-4 tracking-widest">NITHIN</h1>
+        <p class="text-xl md:text-2xl italic text-gray-300">Jewellery Works & Custom Designs</p>
+        <div class="mt-8 h-1 w-32 bg-[#D4AF37]"></div>
+    </section>
+
+    <div class="bg-[#111] border-y border-[#D4AF37]/30 py-4 flex flex-wrap justify-center gap-8 text-sm tracking-widest uppercase">
+        <span>📍 Near Shrike Busstop</span>
+        <span class="text-[#D4AF37]">✦</span>
+        <span>📞 9866483839</span>
+        <span class="text-[#D4AF37]">✦</span>
+        <span>Every Piece Tells A Story</span>
+    </div>
+
+    <section class="py-20 container mx-auto px-6">
+        <h2 class="royal-font text-3xl text-center mb-16 underline underline-offset-[15px] decoration-[#D4AF37]">The Masterpiece Gallery</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+            <script>
+                for(let i=1; i<=12; i++) {
+                    document.write(`
+                    <div class="jewelry-card bg-zinc-900 overflow-hidden rounded-sm">
+                        <div class="relative overflow-hidden group">
+                            <img src="${i}.jpg" class="w-full h-80 object-cover grayscale-[30%] group-hover:grayscale-0 transition duration-500">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="text-white border border-white px-4 py-2 uppercase text-xs tracking-tighter">View Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="royal-font text-lg text-[#D4AF37] mb-4">Design Signature #${i}</h3>
+                            <a href="https://wa.me/919866483839?text=Hi Nithin, I saw Design #${i} on your website. Can I get more details?" 
+                               class="block bg-transparent border border-[#D4AF37] text-[#D4AF37] py-2 hover:bg-[#D4AF37] hover:text-black transition uppercase text-xs font-bold tracking-widest">
+                               Enquire on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    `);
+                }
+            </script>
+        </div>
+    </section>
+
+    <section class="bg-zinc-900 py-20 px-6">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div>
+                <h4 class="royal-font text-[#D4AF37] text-xl mb-2">100% Pure</h4>
+                <p class="text-gray-400 text-sm italic">Guaranteed purity in every gram of gold we craft.</p>
+            </div>
+            <div>
+                <h4 class="royal-font text-[#D4AF37] text-xl mb-2">Custom Made</h4>
+                <p class="text-gray-400 text-sm italic">We bring your dream jewellery designs to life.</p>
+            </div>
+            <div>
+                <h4 class="royal-font text-[#D4AF37] text-xl mb-2">Expert Work</h4>
+                <p class="text-gray-400 text-sm italic">Years of experience in intricate jewellery carving.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 text-center border-t border-zinc-800">
+        <h2 class="royal-font text-[#D4AF37] text-2xl mb-4">NITHIN JEWELLERY WORKS</h2>
+        <p class="text-gray-500 max-w-md mx-auto mb-8 px-4">Visit us for the finest collection of necklaces, rings, and traditional ornaments at Shrike Busstop.</p>
+        <div class="flex justify-center gap-6 mb-10 text-[#D4AF37]">
+            <a href="#" class="hover:text-white transition">Instagram</a>
+            <a href="#" class="hover:text-white transition">Facebook</a>
+        </div>
+        <p class="text-[10px] text-zinc-600 tracking-widest uppercase">© 2026 Crafted for Elegance | Hyderabad</p>
+    </footer>
+
+</body>
+</html>
